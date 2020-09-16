@@ -14,4 +14,15 @@ module.exports = {
             '/api': 'http://localhost:3000'
         }
     },
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                }
+            }
+        ]
+    }
 };
