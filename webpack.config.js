@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   entry: {
-    main: './src/index.js',
+    main: './src/index.ts',
   },
   output: {
     filename: '[name].js',
@@ -17,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.m?j|ts$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",

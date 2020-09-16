@@ -1,8 +1,8 @@
 fetch("/api/ping")
   .then(res => res.json())
-  .then(data => document.body.appendChild(component(data.message)))
+  .then((data: { message: string }) => document.body.appendChild(component(data.message)))
 
-function component(children) {
+function component(children: string) {
   const element = document.createElement('div');
 
   element.innerHTML = `Server says: ${children}`
