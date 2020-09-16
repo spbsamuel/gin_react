@@ -1,3 +1,7 @@
+fetch("/api/ping")
+    .then(res => res.json())
+    .then(data => document.body.appendChild(component(data.message)))
+
 function component(children) {
     const element = document.createElement('div');
 
@@ -5,5 +9,3 @@ function component(children) {
 
     return element;
 }
-
-document.body.appendChild(component(""))
